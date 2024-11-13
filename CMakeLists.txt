@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.27)
-project(untitled1 C)
+project(Rover-Run-Project C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(untitled1 main.c
+add_executable(Rover-Run-Project main.c
         loc.c
         loc.h
         moves.c

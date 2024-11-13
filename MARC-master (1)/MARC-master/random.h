@@ -17,7 +17,7 @@ typedef enum {
 } tmove;
 
 void resetCount();
-t_move selectRandomMove();
+tmove selectRandomMove();
 void moveexecution ();
 
 

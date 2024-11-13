@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)"
+CMAKE_SOURCE_DIR = "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MARC_master__1_.dir/depend.make
@@ -70,108 +70,108 @@ include CMakeFiles/MARC_master__1_.dir/flags.make
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.obj: CMakeFiles/MARC_master__1_.dir/flags.make
 CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.obj: CMakeFiles/MARC_master__1_.dir/includes_C.rsp
-CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.obj: C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master\ (1)/MARC-master/loc.c
+CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.obj: C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master\ (1)/MARC-master/loc.c
 CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.obj: CMakeFiles/MARC_master__1_.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\loc.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\loc.c.obj -c "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\loc.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\loc.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\loc.c.obj -c "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\loc.c"
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\loc.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\loc.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\loc.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\loc.c.i
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MARC_master__1_.dir/MARC-master/loc.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\loc.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\loc.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\loc.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\loc.c.s
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.obj: CMakeFiles/MARC_master__1_.dir/flags.make
 CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.obj: CMakeFiles/MARC_master__1_.dir/includes_C.rsp
-CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.obj: C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master\ (1)/MARC-master/main.c
+CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.obj: C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master\ (1)/MARC-master/main.c
 CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.obj: CMakeFiles/MARC_master__1_.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\main.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\main.c.obj -c "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\main.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\main.c.obj -c "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\main.c"
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\main.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\main.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\main.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\main.c.i
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MARC_master__1_.dir/MARC-master/main.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\main.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\main.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\main.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\main.c.s
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.obj: CMakeFiles/MARC_master__1_.dir/flags.make
 CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.obj: CMakeFiles/MARC_master__1_.dir/includes_C.rsp
-CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.obj: C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master\ (1)/MARC-master/map.c
+CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.obj: C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master\ (1)/MARC-master/map.c
 CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.obj: CMakeFiles/MARC_master__1_.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\map.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\map.c.obj -c "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\map.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\map.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\map.c.obj -c "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\map.c"
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\map.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\map.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\map.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\map.c.i
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MARC_master__1_.dir/MARC-master/map.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\map.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\map.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\map.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\map.c.s
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.obj: CMakeFiles/MARC_master__1_.dir/flags.make
 CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.obj: CMakeFiles/MARC_master__1_.dir/includes_C.rsp
-CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.obj: C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master\ (1)/MARC-master/moves.c
+CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.obj: C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master\ (1)/MARC-master/moves.c
 CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.obj: CMakeFiles/MARC_master__1_.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\moves.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\moves.c.obj -c "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\moves.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\moves.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\moves.c.obj -c "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\moves.c"
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\moves.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\moves.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\moves.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\moves.c.i
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MARC_master__1_.dir/MARC-master/moves.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\moves.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\moves.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\moves.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\moves.c.s
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.obj: CMakeFiles/MARC_master__1_.dir/flags.make
 CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.obj: CMakeFiles/MARC_master__1_.dir/includes_C.rsp
-CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.obj: C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master\ (1)/MARC-master/queue.c
+CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.obj: C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master\ (1)/MARC-master/queue.c
 CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.obj: CMakeFiles/MARC_master__1_.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\queue.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\queue.c.obj -c "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\queue.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\queue.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\queue.c.obj -c "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\queue.c"
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\queue.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\queue.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\queue.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\queue.c.i
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MARC_master__1_.dir/MARC-master/queue.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\queue.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\queue.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\queue.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\queue.c.s
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.obj: CMakeFiles/MARC_master__1_.dir/flags.make
 CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.obj: CMakeFiles/MARC_master__1_.dir/includes_C.rsp
-CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.obj: C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master\ (1)/MARC-master/stack.c
+CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.obj: C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master\ (1)/MARC-master/stack.c
 CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.obj: CMakeFiles/MARC_master__1_.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\stack.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\stack.c.obj -c "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\stack.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\stack.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\stack.c.obj -c "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\stack.c"
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\stack.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\stack.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\stack.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\stack.c.i
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MARC_master__1_.dir/MARC-master/stack.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\stack.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\stack.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\stack.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\stack.c.s
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.obj: CMakeFiles/MARC_master__1_.dir/flags.make
 CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.obj: CMakeFiles/MARC_master__1_.dir/includes_C.rsp
-CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.obj: C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master\ (1)/MARC-master/random.c
+CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.obj: C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master\ (1)/MARC-master/random.c
 CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.obj: CMakeFiles/MARC_master__1_.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\random.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\random.c.obj -c "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\random.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.obj -MF CMakeFiles\MARC_master__1_.dir\MARC-master\random.c.obj.d -o CMakeFiles\MARC_master__1_.dir\MARC-master\random.c.obj -c "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\random.c"
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\random.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\random.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\random.c" > CMakeFiles\MARC_master__1_.dir\MARC-master\random.c.i
 
 CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MARC_master__1_.dir/MARC-master/random.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\MARC-master\random.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\random.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\MARC-master\random.c" -o CMakeFiles\MARC_master__1_.dir\MARC-master\random.c.s
 
 # Object files for target MARC_master__1_
 MARC_master__1__OBJECTS = \
@@ -197,7 +197,7 @@ MARC_master__1_.exe: CMakeFiles/MARC_master__1_.dir/build.make
 MARC_master__1_.exe: CMakeFiles/MARC_master__1_.dir/linkLibs.rsp
 MARC_master__1_.exe: CMakeFiles/MARC_master__1_.dir/objects1.rsp
 MARC_master__1_.exe: CMakeFiles/MARC_master__1_.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable MARC_master__1_.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable MARC_master__1_.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\MARC_master__1_.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -209,6 +209,6 @@ CMakeFiles/MARC_master__1_.dir/clean:
 .PHONY : CMakeFiles/MARC_master__1_.dir/clean
 
 CMakeFiles/MARC_master__1_.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)" "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)" "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\cmake-build-debug" "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\cmake-build-debug" "C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles\MARC_master__1_.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)" "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)" "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\cmake-build-debug" "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\cmake-build-debug" "C:\Users\abdel\Documents\GitHub\Rover-Run-Project\MARC-master (1)\cmake-build-debug\CMakeFiles\MARC_master__1_.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/MARC_master__1_.dir/depend
 

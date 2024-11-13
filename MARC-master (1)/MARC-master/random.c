@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include "moves.h"
 #include "random.h"
 
@@ -18,7 +17,7 @@ void resetCount() {
     }
 }
 
-t_move selectRandomMove() {
+tmove selectRandomMove() {
     int move;
     while (1) {
         move = rand() % 7;  // Randomly choose one of the 7 moves

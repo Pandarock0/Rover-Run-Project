@@ -8,116 +8,116 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug"/>
+				<Option working_dir="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="MARC_master__1_">
-				<Option output="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/MARC_master__1_.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug"/>
+				<Option output="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/MARC_master__1_.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master"/>
+					<Add directory="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 MARC_master__1_"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 MARC_master__1_"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="MARC_master__1_/fast">
-				<Option output="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/MARC_master__1_.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug"/>
+				<Option output="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/MARC_master__1_.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master"/>
+					<Add directory="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 MARC_master__1_/fast"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 MARC_master__1_/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug"/>
+				<Option working_dir="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug"/>
+				<Option working_dir="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/loc.c">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/loc.c">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/loc.h">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/loc.h">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/main.c">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/main.c">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/map.c">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/map.c">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/map.h">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/map.h">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/moves.c">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/moves.c">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/moves.h">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/moves.h">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/queue.c">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/queue.c">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/queue.h">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/queue.h">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/random.c">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/random.c">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/random.h">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/random.h">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/stack.c">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/stack.c">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/MARC-master/stack.h">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/MARC-master/stack.h">
 			<Option target="MARC_master__1_"/>
 		</Unit>
-		<Unit filename="C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/MARC-master (1)/CMakeLists.txt">
+		<Unit filename="C:/Users/abdel/Documents/GitHub/Rover-Run-Project/MARC-master (1)/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "map.h"
+#include "random.h"
 
 int main() {
     t_map map;
@@ -32,5 +33,12 @@ int main() {
         printf("\n");
     }
     displayMap(map);
+
+    // Random 9 phases
+    srand(time(NULL));
+
+    printf("Executing a phase of 9 random moves:\n");
+    moveexecution();
+
     return 0;
 }

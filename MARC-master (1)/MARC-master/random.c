@@ -30,12 +30,11 @@ t_move selectRandomMove() {
 }
 
 void moveexecution (){
-    resetCount();  // Reset moves at the beginning of each phase
+    resetCount();
 
     for (int i = 0; i < TOTAL_MOVES; i++) {
         t_move chosen_move = selectRandomMove();
 
-        // Display the chosen move for demonstration purposes
         switch (chosen_move) {
             case For_10:   printf("Move forward 10 m\n"); break;
             case For_20:   printf("Move forward 20 m\n"); break;
@@ -48,12 +47,4 @@ void moveexecution (){
     }
 }
 
-int main() {
-    srand(time(NULL));  // Initialize random seed
 
-    // Run a demonstration of one phase
-    printf("Executing a phase of 9 random moves:\n");
-    moveexecution();
-
-    return 0;
-}

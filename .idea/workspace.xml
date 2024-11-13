@@ -10,7 +10,9 @@
     <generated />
   </component>
   <component name="CMakeSettings">
-    <configurations />
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="005fdd58-b000-46f7-b50e-f957b7ecee18" name="Changes" comment="" />
@@ -49,6 +51,7 @@
   "keyToString": {
     "C/C++ File.main.c.executor": "Run",
     "CMake Application.MARC_master__1_.executor": "Run",
+    "CMake Application.untitled1.executor": "Run",
     "CMake Debug.Rover-Run-Project.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -56,7 +59,6 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "Léo",
     "last_opened_file_path": "C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/CMakeLists.txt",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -65,6 +67,7 @@
     "nodejs_package_manager_path": "npm",
     "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
     "org.rust.first.attach.projects.stats": "true",
+    "settings.editor.selected.configurable": "CMakeSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -80,6 +83,11 @@
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
+    <configuration name="untitled1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled1" TARGET_NAME="untitled1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled1" RUN_TARGET_NAME="untitled1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -90,7 +98,7 @@
       <updated>1731491390486</updated>
       <workItem from="1731491392971" duration="5536000" />
       <workItem from="1731498817010" duration="346000" />
-      <workItem from="1731499175854" duration="648000" />
+      <workItem from="1731499175854" duration="1085000" />
     </task>
     <servers />
   </component>

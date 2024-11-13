@@ -39,9 +39,9 @@ void moveexecution (){
             case For_20:    printf("Move forward 20 m\n"); break;
             case For_30:    printf("Move forward 30 m\n"); break;
             case Back_10:   printf("Reverse 10 m\n"); break;
-            case Turn_LEFT: printf("Turn left 90°\n"); break;
-            case Turn_RIGHT:printf("Turn right 90°\n"); break;
-            case U_Turn:    printf("Turn back 180°\n"); break;
+            case Turn_LEFT: printf("Turn left 90 degrees\n"); break;
+            case Turn_RIGHT:printf("Turn right 90 degrees\n"); break;
+            case U_Turn:    printf("Turn back 180 degrees\n"); break;
         }
     }
 }

@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <time.h>
 #include "map.h"
+#include "random.h"
+
+void srand(time_t time);
 
 int main() {
     t_map map;
@@ -9,7 +12,7 @@ int main() {
     // If either _WIN32 or _WIN64 is defined, it means we are on a Windows platform.
     // On Windows, file paths use backslashes (\), hence we use the appropriate file path for Windows.
 #if defined(_WIN32) || defined(_WIN64)
-    map = createMapFromFile("..\\maps\\example1.map");
+    map = createMapFromFile("..\\MARC-master (1)\\maps\\example1.map");
 #else
     map = createMapFromFile("../maps/example1.map");
 #endif
@@ -41,4 +44,8 @@ int main() {
     moveexecution();
 
     return 0;
+}
+
+void srand(time_t time) {
+
 }

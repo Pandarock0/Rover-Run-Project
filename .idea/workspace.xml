@@ -7,7 +7,9 @@
   "useNewFormat": true
 }]]></component>
   <component name="CMakeRunConfigurationManager">
-    <generated />
+    <generated>
+      <config projectName="untitled1" targetName="untitled1" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -98,7 +100,7 @@
       <updated>1731491390486</updated>
       <workItem from="1731491392971" duration="5536000" />
       <workItem from="1731498817010" duration="346000" />
-      <workItem from="1731499175854" duration="1085000" />
+      <workItem from="1731499175854" duration="1844000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <time.h>
 #include "map.h"
-#include "random.h"
 
 int main() {
     t_map map;

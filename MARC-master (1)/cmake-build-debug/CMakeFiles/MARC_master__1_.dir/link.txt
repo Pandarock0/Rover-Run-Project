@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\MARC_master__1_.dir/objects.a
-C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\ar.exe qc CMakeFiles\MARC_master__1_.dir/objects.a @CMakeFiles\MARC_master__1_.dir\objects1.rsp
-C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\MARC_master__1_.dir/objects.a -Wl,--no-whole-archive -o MARC_master__1_.exe -Wl,--out-implib,libMARC_master__1_.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\MARC_master__1_.dir\linkLibs.rsp

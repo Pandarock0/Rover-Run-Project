@@ -6,6 +6,7 @@
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
 }</component>
+<<<<<<< Updated upstream
   <component name="CMakeReloadState">
     <option name="reloaded" value="true" />
   </component>
@@ -19,6 +20,20 @@
     <list default="true" id="005fdd58-b000-46f7-b50e-f957b7ecee18" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
+=======
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="untitled1" targetName="untitled1" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="005fdd58-b000-46f7-b50e-f957b7ecee18" name="Changes" comment="" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,11 +51,20 @@
     </option>
   </component>
   <component name="Git.Settings">
+<<<<<<< Updated upstream
+=======
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Leo" />
+      </map>
+    </option>
+>>>>>>> Stashed changes
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="mydwcgrr" />
   </component>
+<<<<<<< Updated upstream
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -53,6 +77,8 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2onIGKirbZRyTD5h1WokaUcjqp7" />
+=======
+>>>>>>> Stashed changes
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,6 +87,10 @@
   &quot;keyToString&quot;: {
     &quot;C/C++ File.main.c.executor&quot;: &quot;Run&quot;,
     &quot;CMake Application.MARC_master__1_.executor&quot;: &quot;Run&quot;,
+<<<<<<< Updated upstream
+=======
+    &quot;CMake Application.untitled1.executor&quot;: &quot;Run&quot;,
+>>>>>>> Stashed changes
     &quot;CMake Debug.Rover-Run-Project.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -68,7 +98,10 @@
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+<<<<<<< Updated upstream
     &quot;git-widget-placeholder&quot;: &quot;Leo&quot;,
+=======
+>>>>>>> Stashed changes
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/CMakeLists.txt&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -77,12 +110,20 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
     &quot;org.rust.first.attach.projects.stats&quot;: &quot;true&quot;,
+<<<<<<< Updated upstream
+=======
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
+>>>>>>> Stashed changes
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project" />
+<<<<<<< Updated upstream
+=======
+      <recent name="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)" />
+>>>>>>> Stashed changes
     </key>
   </component>
   <component name="RunManager">
@@ -91,8 +132,17 @@
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+=======
+    <configuration name="untitled1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled1" TARGET_NAME="untitled1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled1" RUN_TARGET_NAME="untitled1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+>>>>>>> Stashed changes
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="005fdd58-b000-46f7-b50e-f957b7ecee18" name="Changes" comment="" />
@@ -102,6 +152,7 @@
       <updated>1731491390486</updated>
       <workItem from="1731491392971" duration="5536000" />
       <workItem from="1731498817010" duration="346000" />
+<<<<<<< Updated upstream
       <workItem from="1731499175854" duration="3000" />
     </task>
     <servers />
@@ -109,6 +160,12 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+=======
+      <workItem from="1731499175854" duration="2012000" />
+    </task>
+    <servers />
+  </component>
+>>>>>>> Stashed changes
   <component name="VCPKGProject">
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />

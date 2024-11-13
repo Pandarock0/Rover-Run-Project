@@ -23,6 +23,13 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -63,8 +70,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)" />
       <recent name="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project" />
+      <recent name="C:\Users\Carouge\OneDrive\Documents\EFREI\L1\Rover-Run-Project\MARC-master (1)" />
     </key>
   </component>
   <component name="RunManager">
@@ -83,7 +90,7 @@
       <updated>1731491390486</updated>
       <workItem from="1731491392971" duration="5536000" />
       <workItem from="1731498817010" duration="346000" />
-      <workItem from="1731499175854" duration="515000" />
+      <workItem from="1731499175854" duration="648000" />
     </task>
     <servers />
   </component>

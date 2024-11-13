@@ -16,4 +16,5 @@ add_executable(untitled1 main.c
         stack.h
         project_function.c
         project_function.h
+        random.c
 )

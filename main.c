@@ -1,5 +1,9 @@
 #include <stdio.h>
+#include <time.h>
+#include "random.h"
 #include "map.h"
+
+void srand(time_t time);
 
 int main() {
     t_map map = createMapFromFile("..\\maps\\example1.map");
@@ -22,5 +26,16 @@ int main() {
         printf("\n");
     }
     displayMap(map);
+
+    //Random 9 movements and display
+    srand(time(NULL));  // Initialize random seed
+
+    // Run a demonstration of one phase
+    printf("Executing a phase of 9 random moves:\n");
+    moveexecution();
     return 0;
+}
+
+void srand(time_t time) {
+
 }

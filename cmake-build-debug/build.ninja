@@ -105,6 +105,17 @@ build CMakeFiles/untitled1.dir/project_function.c.obj: C_COMPILER__untitled1_uns
   TARGET_COMPILE_PDB = CMakeFiles\untitled1.dir\
   TARGET_PDB = untitled1.pdb
 
+<<<<<<< HEAD
+=======
+build CMakeFiles/untitled1.dir/random.c.obj: C_COMPILER__untitled1_unscanned_Debug C$:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/random.c || cmake_object_order_depends_target_untitled1
+  DEP_FILE = CMakeFiles\untitled1.dir\random.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled1.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled1.dir
+  TARGET_COMPILE_PDB = CMakeFiles\untitled1.dir\
+  TARGET_PDB = untitled1.pdb
+
+>>>>>>> 4bf9e387ee5400dcdf7830f0842afe8e1e9b4d98
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled1
@@ -113,7 +124,11 @@ build CMakeFiles/untitled1.dir/project_function.c.obj: C_COMPILER__untitled1_uns
 #############################################
 # Link the executable untitled1.exe
 
+<<<<<<< HEAD
 build untitled1.exe: C_EXECUTABLE_LINKER__untitled1_Debug CMakeFiles/untitled1.dir/main.c.obj CMakeFiles/untitled1.dir/loc.c.obj CMakeFiles/untitled1.dir/moves.c.obj CMakeFiles/untitled1.dir/map.c.obj CMakeFiles/untitled1.dir/queue.c.obj CMakeFiles/untitled1.dir/stack.c.obj CMakeFiles/untitled1.dir/project_function.c.obj
+=======
+build untitled1.exe: C_EXECUTABLE_LINKER__untitled1_Debug CMakeFiles/untitled1.dir/main.c.obj CMakeFiles/untitled1.dir/loc.c.obj CMakeFiles/untitled1.dir/moves.c.obj CMakeFiles/untitled1.dir/map.c.obj CMakeFiles/untitled1.dir/queue.c.obj CMakeFiles/untitled1.dir/stack.c.obj CMakeFiles/untitled1.dir/project_function.c.obj CMakeFiles/untitled1.dir/random.c.obj
+>>>>>>> 4bf9e387ee5400dcdf7830f0842afe8e1e9b4d98
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\untitled1.dir

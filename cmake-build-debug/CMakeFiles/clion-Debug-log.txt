@@ -5,6 +5,10 @@
 -- Check for working C compiler: C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/gcc.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
+<<<<<<< HEAD
 -- Configuring done (1.6s)
+=======
+-- Configuring done (1.8s)
+>>>>>>> 4bf9e387ee5400dcdf7830f0842afe8e1e9b4d98
 -- Generating done (0.0s)
 -- Build files have been written to: C:/Users/Carouge/OneDrive/Documents/EFREI/L1/Rover-Run-Project/cmake-build-debug

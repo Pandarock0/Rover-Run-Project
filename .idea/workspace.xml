@@ -38,12 +38,17 @@
 <<<<<<< Updated upstream
     <list default="true" id="005fdd58-b000-46f7-b50e-f957b7ecee18" name="Changes" comment="" />
 <<<<<<< HEAD
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> 4bf9e387ee5400dcdf7830f0842afe8e1e9b4d98
 =======
     <list default="true" id="cdcace2a-5397-4e15-b248-08ffada42ba4" name="Changes" comment="" />
+=======
 >>>>>>> Stashed changes
+>>>>>>> Stashed changes
+=======
+>>>>>>> 4bf9e387ee5400dcdf7830f0842afe8e1e9b4d98
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -1,10 +1,9 @@
 //
-// Created by Carouge on 01/11/2024.
+// Created by abdel on 13/11/2024.
 //
 
-
-#ifndef MARC_MASTER__1__RANDOM_H
-#define MARC_MASTER__1__RANDOM_H
+#ifndef ROVER_RUN_PROJECT_RANDOM_H
+#define ROVER_RUN_PROJECT_RANDOM_H
 
 typedef enum {
     For_10,
@@ -20,6 +19,4 @@ void resetCount();
 tmove selectRandomMove();
 void moveexecution ();
 
-
-
-#endif //MARC_MASTER__1__RANDOM_H
+#endif //ROVER_RUN_PROJECT_RANDOM_H

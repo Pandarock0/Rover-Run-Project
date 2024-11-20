@@ -1,63 +1,22 @@
 //
-// Created by flasque on 19/10/2024.
+// Created by abdel on 13/11/2024.
 //
 
-#include <stdlib.h>
-#include <assert.h>
-#include "stack.h"
+#ifndef ROVER_RUN_PROJECT_RANDOM_H
+#define ROVER_RUN_PROJECT_RANDOM_H
 
-/**
- * @brief Function to create a stack
- * @param size : the size of the stack
- * @return the stack
- */
-t_stack createStack(int size)
-{
-    // the size of the stack must be positive
-    assert(size > 0);
-    t_stack stack;
-    stack.size = size;
-    stack.nbElts = 0;
-    stack.values = (int *)malloc(size * sizeof(int));
-    return stack;
-}
+typedef enum {
+    For_10,
+    For_20,
+    For_30,
+    Back_10,
+    Turn_LEFT,
+    Turn_RIGHT,
+    U_Turn,
+} tmove;
 
-/**
- * @brief Function to push a value in the stack
- * @param stack : the stack
- * @param value : the value to push
- * @return none
- */
-void push(t_stack *p_stack, int value)
-{
-    // the stack must not be full
-    assert(p_stack->nbElts < p_stack->size);
-    p_stack->values[p_stack->nbElts] = value;
-    p_stack->nbElts++;
-    return;
-}
+void resetCount();
+tmove selectRandomMove();
+void moveexecution ();
 
-/**
- * @brief Function to pop a value from the stack
- * @param stack : the stack
- * @return the value popped
- */
-int pop(t_stack *p_stack)
-{
-    // the stack must not be empty
-    assert(p_stack->nbElts > 0);
-    p_stack->nbElts--;
-    return p_stack->values[p_stack->nbElts];
-}
-
-/**
- * @brief Function to get the top value of the stack
- * @param stack : the stack
- * @return the top value
- */
-int top(t_stack stack)
-{
-    // the stack must not be empty
-    assert(stack.nbElts > 0);
-    return stack.values[stack.nbElts - 1];
-}
+#endif //ROVER_RUN_PROJECT_RANDOM_H

@@ -4,9 +4,6 @@
 #include "map.h"
 
 void srand(time_t time);
-void moveexecution ();
-t_map createMapFromFile(char *);
-void displayMap(t_map);
 
 int main() {
     t_map map = createMapFromFile("..\\maps\\example1.map");

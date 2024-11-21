@@ -20,29 +20,38 @@ void resetCount() {
 tmove selectRandomMove() {
     int move;
     while (1) {
-        move = rand() % 7;  // Randomly choose one of the 7 moves
+        move = rand() % 7;
+        printf("%d",move);// Randomly choose one of the 7 moves
         if (current_availability[move] > 0) {
             current_availability[move]--;  // Reduce the count of this move
-            return (t_move)move;           // Return the selected move
+            return (tmove)move;           // Return the selected move
         }
     }
 }
 
 void moveexecution (){
     resetCount();  // Reset moves at the beginning of each phase
-
+    int moves[9];
     for (int i = 0; i < TOTAL_MOVES; i++) {
         tmove chosen_move = selectRandomMove();
 
         // Display the chosen move for demonstration purposes
         switch (chosen_move) {
-            case For_10:   printf("Move forward 10 m\n"); break;
-            case For_20:   printf("Move forward 20 m\n"); break;
-            case For_30:   printf("Move forward 30 m\n"); break;
-            case Back_10:   printf("Reverse 10 m\n"); break;
-            case Turn_LEFT: printf("Turn left 90 degrees\n"); break;
-            case Turn_RIGHT:printf("Turn right 90 degrees\n"); break;
-            case U_Turn: printf("Turn back 180 degrees\n"); break;
+            case For_10: moves[i]=0;
+                break;
+            case For_20: moves[i]=1;
+                break;
+            case For_30: moves[i]=2;
+                break;
+            case Back_10:   moves[i]=3;
+                break;
+            case Turn_LEFT: moves[i]=4;
+                break;
+            case Turn_RIGHT: moves[i]=5;
+                break;
+            case U_Turn: moves[i]=6;
+                break;
         }
+        /*printf("%d", moves[i]);*/
     }
 }

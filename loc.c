@@ -49,4 +49,3 @@ t_position DOWN(t_position pos)
     new_pos.y = pos.y + 1;
     return new_pos;
 }
-

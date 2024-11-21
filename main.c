@@ -39,4 +39,3 @@ int main() {
 void srand(time_t time) {
 
 }
-

@@ -25,9 +25,20 @@ int main() {
     displayMap(map);
 
     //function test part
-    srand(time(NULL));
-    int* disponible_move = moveexecution();
 
+
+    srand(time(NULL));
+    int* list_mvmt = moveexecution();
+
+    t_tree tree = create_tree(list_mvmt);
+
+    display_tree(tree.root_node);
+
+    /*
+    for(int i=0; i<9;i++){
+        printf("%d", list_mvmt[i]);
+    }
+    */ // Test for random mouvements list
 
     return 0;
 }

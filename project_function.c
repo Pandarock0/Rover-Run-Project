@@ -7,6 +7,7 @@
 #include "map.h"
 #include "queue.h"
 #include "moves.h"
+#include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdio.h>
@@ -38,6 +39,7 @@ t_move selectRandomMove() {
 }
 
 int* moveexecution() {
+
     resetCount();  // Reset moves at the beginning of each phase
     int* moves = (int*) malloc(TOTAL_MOVES*sizeof(int));
     for (int i = 0; i < TOTAL_MOVES; i++) {
@@ -61,30 +63,15 @@ int* moveexecution() {
                 break;
         }
     }
-    /*for(int i=0; i<9; i++){
-        printf("%d", moves[i]);
-    }*/
+
     return moves;
 }
 
 
 //-------------------------------------------------------------------------------------------------------
 
-typedef struct node{
-    int value;
-    int * available_mvmt;
-    struct node** list_node;
-    struct node* previous_node;
-    int chosen_move;
 
-
-}t_node;
-
-typedef struct s_tree{
-    t_node* root_node;
-}t_tree;
-
-t_node* create_node(int nb_available_mvmt, int* mvmt_list, int value, int move_choose){
+t_node* create_node(int depth, int* mvmt_list, int value, int move_choose, int nb_available_mvmt){
 
     t_node* new_node = (t_node*) malloc(sizeof(t_node));
 
@@ -103,69 +90,103 @@ t_node* create_node(int nb_available_mvmt, int* mvmt_list, int value, int move_c
         new_node->list_node[i] = NULL;
     }
 
-//memory alocation for previous_node
-    new_node->previous_node = NULL;
-    return new_node;
-
 //allocation for the chosen movement corresponding to the node
     new_node->chosen_move = move_choose;
+
+//allocation nb of available mvmts
+    new_node->total_moves = nb_available_mvmt;
+
+//allocatuon of level correponding
+    new_node->depth = depth;
+
+    return new_node;
+}
+
+
+void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_list, int depth){
+    if (depth >= 5) {
+        return;
+    }
+
+    if (depth <= 5) {
+        //new_mvmt list
+        for (int i = 0; i < nb_available_mvmt; i++) {
+            int *new_mvmt_list = (int *) malloc((nb_available_mvmt - 1) * sizeof(int));
+            int k = 0; //because for the iteration j it will be to big compare to the size of the new list
+
+            for (int j = 0; j < nb_available_mvmt; j++) {
+                if (j != i) {
+                    new_mvmt_list[k++] = mvmt_list[j];
+                }
+            }
+            t_node *new_node = create_node(depth + 1, new_mvmt_list, 33333, mvmt_list[i], nb_available_mvmt - 1);
+            root_node->list_node[i] = new_node;
+            free(new_mvmt_list);
+        }
+    }
+    else {
+        return;
+    }
+
+    //recursive part of the function
+    for (int i = 0; i < nb_available_mvmt; i++) {
+        if (root_node->list_node[i] != NULL) {
+            build_tree_recursively(root_node->list_node[i], nb_available_mvmt - 1,
+                                   root_node->list_node[i]->available_mvmt, depth + 1);
+        }
+
+    }
 }
 
 
 t_tree create_tree(int* mvmt_list){
     t_tree tree;
-    //int* mvmt_list = moveexecution();
-    tree.root_node = create_node(TOTAL_MOVES, mvmt_list, 2, 00000);
+    tree.root_node = create_node(0, mvmt_list, 999999999, 9999999, TOTAL_MOVES);
+    tree.root_node->localisation = loc_init(5, 1, NORTH);
+
+    build_tree_recursively(tree.root_node, TOTAL_MOVES, mvmt_list, 0);
+
     return tree;
 }
 
-
-void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_list, int move_choose, int total_moves){
-
-
-    //new_mvmt list
-    for(int i=0; i<total_moves; i++){
-        int* new_mvmt_list = (int*) malloc((nb_available_mvmt-1)*sizeof(int));
-        int k = 0; //because for the iteration j it will be to big compare to the size of the new list
-
-        for (int j=0; j<nb_available_mvmt; j++){
-            if (j != i) {
-                new_mvmt_list[k++] = mvmt_list[j];
-            }
-        }
-        if (i != total_moves) {
-            t_node *new_node = create_node((total_moves - 1), new_mvmt_list, 2, mvmt_list[i]);
-            root_node->list_node[i] = new_node;
-        }
-        free(new_mvmt_list);
+void display_tree(t_node* node) {
+    if (node == NULL) {
+        return;
     }
 
+    //informations of the nodes
+    printf("Node:\n");
+    printf("  Depth        : %d\n", node->depth);
+    printf("  Value        : %d\n", node->value);
+    printf("  Chosen Move  : %d\n", node->chosen_move);
+    printf("  Total Moves  : %d\n", node->total_moves);
 
-    //recursive part of the function
-    for (int i = 0; i < total_moves; i++) {
-        if (root_node->list_node[i] != NULL) {
+    printf("  Available Mvmt: ");
+    for (int i = 0; i < node->total_moves; i++) {
+        printf("%d ", node->available_mvmt[i]);
+    }
+    printf("\n");
+    printf("  Next nodes addresses : [");
+    for (int i=0; i< node->total_moves; i++){
+        printf("%p ", node->list_node[i]);
+    }
+    printf("]\n\n\n");
 
-            build_tree_recursively(root_node->list_node[i], nb_available_mvmt - 1,
-                                   root_node->list_node[i]->available_mvmt,
-                                   root_node->list_node[i]->chosen_move, total_moves - 1);
+    //address of children node
+    for (int i = 0; i < node->total_moves; i++) {
+        if (node->list_node[i] != NULL) {
+            display_tree(node->list_node[i]);
         }
-
     }
 }
+
 /*
-void add_node_tree(t_tree tree_root, int* mvmt_list){
-    total_moves = TOTAL_MOVES;
-    int chosen_move;
-    for(int i=0; i<TOTAL_MOVES; i++){
-        chosen_move = mvmt_list[i];
-        for (int i=0; i< total_moves; i++){
-            if (total_moves[i] == chosen_move){
-                total_moves--;
-
-            }
+    for(int i=0; i<tree.root_node->total_moves; i++){
+        printf("[");
+        for(int j=0; j<tree.root_node->list_node[i]->total_moves; j++){
+            printf("%d", tree.root_node->list_node[i]->available_mvmt[j]);
         }
-        tree_root.root_node->list_node[i] = create_node(total_moves,)
+        printf("] ");
     }
-
-}
+*/
 

@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 #include "random.h"
 #include "map.h"
-
-void srand(time_t time);
 
 int main() {
     t_map map = createMapFromFile("..\\maps\\example1.map");
@@ -32,10 +31,11 @@ int main() {
 
     // Run a demonstration of one phase
     printf("Executing a phase of 9 random moves:\n");
-    moveexecution();
+    int* moves = moveexecution();
+    for (int i = 0; i<9; i++){
+        printf("%d", moves[i]);
+    }
+
+    free(moves);
     return 0;
-}
-
-void srand(time_t time) {
-
 }

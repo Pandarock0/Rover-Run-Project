@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "map.h"
+#include "project_function.h"
 
 int main() {
     t_map map = createMapFromFile("..\\maps\\example1.map");
@@ -22,5 +23,11 @@ int main() {
         printf("\n");
     }
     displayMap(map);
+
+    //function test part
+    srand(time(NULL));
+    int* disponible_move = moveexecution();
+
+
     return 0;
 }

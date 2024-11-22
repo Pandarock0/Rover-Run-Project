@@ -71,12 +71,12 @@ int* moveexecution() {
 //-------------------------------------------------------------------------------------------------------
 
 
-t_node* create_node(int depth, int* mvmt_list, int value, int move_choose, int nb_available_mvmt){
+t_node* create_node(int depth, int* mvmt_list, int value, int move_choose, int nb_available_mvmt, t_node* previous_node){
 
     t_node* new_node = (t_node*) malloc(sizeof(t_node));
 
-//allocation for the value
-    new_node->value = value;
+//allocation for previous node
+    new_node->previous_node = previous_node;
 
 //allocation for available_mvmt
     new_node->available_mvmt = (int*) malloc(nb_available_mvmt * sizeof(int));
@@ -99,10 +99,25 @@ t_node* create_node(int depth, int* mvmt_list, int value, int move_choose, int n
 //allocatuon of level correponding
     new_node->depth = depth;
 
+//allocation of the localisation and cost_value
+    update_loc_and_cost_node(new_node,999999); //?????????? miss the cost_value
     return new_node;
 }
 
+int update_loc_and_cost_node(t_node* current_node, int cost_current_node){
+   int approve;
+   t_move chosen_move = (t_move)current_node->chosen_move;
+   if (current_node->previous_node != NULL) {
+       current_node->localisation = move(current_node->previous_node->localisation, chosen_move);
+   } //for the root node, updated in the create tree function
+   int y_max = 8, x_max = 7; //the border of the map
+   approve = isValidLocalisation(current_node->localisation.pos, x_max, y_max);
 
+   return approve;
+
+}
+
+//function work like a postfix tree allocation
 void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_list, int depth){
     if (depth >= 5) {
         return;
@@ -119,7 +134,7 @@ void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_
                     new_mvmt_list[k++] = mvmt_list[j];
                 }
             }
-            t_node *new_node = create_node(depth + 1, new_mvmt_list, 33333, mvmt_list[i], nb_available_mvmt - 1);
+            t_node *new_node = create_node(depth + 1, new_mvmt_list, 33333, mvmt_list[i], nb_available_mvmt - 1, root_node);
             root_node->list_node[i] = new_node;
             free(new_mvmt_list);
         }
@@ -141,8 +156,9 @@ void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_
 
 t_tree create_tree(int* mvmt_list){
     t_tree tree;
-    tree.root_node = create_node(0, mvmt_list, 999999999, 9999999, TOTAL_MOVES);
+    tree.root_node = create_node(0, mvmt_list, 999999999, 9999999, TOTAL_MOVES, NULL);
     tree.root_node->localisation = loc_init(5, 1, NORTH);
+    tree.root_node->value_cost = 0;
 
     build_tree_recursively(tree.root_node, TOTAL_MOVES, mvmt_list, 0);
 
@@ -157,7 +173,7 @@ void display_tree(t_node* node) {
     //informations of the nodes
     printf("Node:\n");
     printf("  Depth        : %d\n", node->depth);
-    printf("  Value        : %d\n", node->value);
+    printf("  Value        : %d\n", node->value_cost);
     printf("  Chosen Move  : %d\n", node->chosen_move);
     printf("  Total Moves  : %d\n", node->total_moves);
 

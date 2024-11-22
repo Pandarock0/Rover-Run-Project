@@ -100,23 +100,40 @@ t_node* create_node(int depth, int* mvmt_list, int value, int move_choose, int n
     new_node->depth = depth;
 
 //allocation of the localisation and cost_value
-    update_loc_and_cost_node(new_node,999999); //?????????? miss the cost_value
+    int exit = update_loc(new_node); //update map and new_localisation (not the real of the robot)
+
+    if (exit==1){ //Condition if MARC is outside the map or not
+        new_node->value_cost = calculate_cost(new_node);
+    }
+
     return new_node;
 }
 
-int update_loc_and_cost_node(t_node* current_node, int cost_current_node){
+int update_loc(t_node* current_node){
    int approve;
    t_move chosen_move = (t_move)current_node->chosen_move;
+
+
    if (current_node->previous_node != NULL) {
-       current_node->localisation = move(current_node->previous_node->localisation, chosen_move);
+
+       current_node->localisation = move(current_node->previous_node->localisation, chosen_move); //update localisation
+       current_node->map = current_node->previous_node->map;
+
    } //for the root node, updated in the create tree function
-   int y_max = 8, x_max = 7; //the border of the map
+   int y_max = current_node->map.y_max, x_max = current_node->map.y_max; //Border of the map
    approve = isValidLocalisation(current_node->localisation.pos, x_max, y_max);
 
    return approve;
 
 }
 
+int calculate_cost(t_node* current_node){
+    int cost;
+    int x = current_node->localisation.pos.x, y = current_node->localisation.pos.y;
+    cost = current_node->map.costs[x][y];
+
+    return cost;
+}
 //function work like a postfix tree allocation
 void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_list, int depth){
     if (depth >= 5) {
@@ -156,9 +173,12 @@ void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_
 
 t_tree create_tree(int* mvmt_list){
     t_tree tree;
+    //initialisation of the root
     tree.root_node = create_node(0, mvmt_list, 999999999, 9999999, TOTAL_MOVES, NULL);
-    tree.root_node->localisation = loc_init(5, 1, NORTH);
+    tree.root_node->localisation = loc_init(3, 3, NORTH);
     tree.root_node->value_cost = 0;
+    tree.root_node->map = createTrainingMap(); //temporary map
+
 
     build_tree_recursively(tree.root_node, TOTAL_MOVES, mvmt_list, 0);
 
@@ -176,6 +196,7 @@ void display_tree(t_node* node) {
     printf("  Value        : %d\n", node->value_cost);
     printf("  Chosen Move  : %d\n", node->chosen_move);
     printf("  Total Moves  : %d\n", node->total_moves);
+    printf("  Cost of the pixel : %d\n", node->value_cost);
 
     printf("  Available Mvmt: ");
     for (int i = 0; i < node->total_moves; i++) {

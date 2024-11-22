@@ -6,6 +6,7 @@
 #define UNTITLED1_PROJECT_FUNCTION_H
 
 #include "moves.h"
+#include "map.h"
 
 void resetCount();
 int* moveexecution();
@@ -22,6 +23,7 @@ typedef struct node{
 
     //map parameters
     int value_cost;
+    t_map map;
     t_localisation localisation;
 
 } t_node;
@@ -34,11 +36,14 @@ t_node* create_node(int depth, int* mvmt_list, int value, int move_choose, int n
 
 t_tree create_tree(int* mvmt_list);
 
+
 void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_list, int total_moves);
 
 void display_tree(t_node* node); //test function
 
-int update_loc_and_cost_node(t_node* current_node, int cost_current_node);
+int update_loc(t_node* current_node);
+
+int calculate_cost(t_node*);
 
 
 

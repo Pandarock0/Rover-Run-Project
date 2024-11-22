@@ -11,7 +11,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <stdio.h>
+#include <string.h>
 
 
 #define TOTAL_MOVES 9
@@ -163,3 +163,39 @@ void display_tree(t_node* node, int depth) {
     }
 */
 
+t_map choose_map (){
+    printf("Choose a map to load:\n");
+    printf("1. example1.map\n");
+    printf("2. training.map\n");
+    printf("3. projectmap.map\n");
+    printf("4. Other map\n");
+    int mapchoice;
+    t_map map;
+    scanf("%d", &mapchoice);
+    switch (mapchoice){
+        case 1:
+            map = createMapFromFile("..\\maps\\example1.map");
+            displayMap(map);
+            break;
+        case 2:
+            map = createMapFromFile("..\\maps\\training.map");
+            displayMap(map);
+            break;
+        case 3:
+            map = createMapFromFile("..\\maps\\projectmap.map");
+            displayMap(map);
+            break;
+        case 4:
+            printf("Enter the exact name of the map you want to load:\n");
+            char name[100];
+
+            scanf("%s", name);
+            char path[100] = "..\\\\maps\\\\";
+            strcat(path, name);
+            char finalpath[100] = ".map";
+            strcat(path, finalpath);
+            printf ("%s", path);
+            break;
+    }
+    return map;
+}

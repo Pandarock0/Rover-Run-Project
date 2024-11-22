@@ -151,5 +151,4 @@ t_localisation move(t_localisation loc, t_move move)
 void updateLocalisation(t_localisation *p_loc, t_move m)
 {
     *p_loc = move(*p_loc, m);
-    return;
 }

@@ -101,8 +101,8 @@ t_node* create_node(int depth, int* mvmt_list, int value, int move_choose, int n
 
 //allocation of the localisation and cost_value
     int exit = update_loc(new_node); //update map and new_localisation (not the real of the robot)
-
-    if (exit==1){ //Condition if MARC is outside the map or not
+    new_node->exit_condition = exit;
+    if (exit == 1) {
         new_node->value_cost = calculate_cost(new_node);
     }
 
@@ -130,7 +130,7 @@ int update_loc(t_node* current_node){
 int calculate_cost(t_node* current_node){
     int cost;
     int x = current_node->localisation.pos.x, y = current_node->localisation.pos.y;
-    cost = current_node->map.costs[x][y];
+    cost = current_node->map.costs[x][y]+(current_node->previous_node->value_cost);
 
     return cost;
 }
@@ -152,7 +152,12 @@ void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_
                 }
             }
             t_node *new_node = create_node(depth + 1, new_mvmt_list, 33333, mvmt_list[i], nb_available_mvmt - 1, root_node);
-            root_node->list_node[i] = new_node;
+            if (new_node->value_cost >= 10000 || new_node->exit_condition == 0){
+                root_node->list_node[i] = NULL;
+            }
+            else {
+                root_node->list_node[i] = new_node;
+            }
             free(new_mvmt_list);
         }
     }

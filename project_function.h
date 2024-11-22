@@ -23,6 +23,7 @@ typedef struct node{
 
     //map parameters
     int value_cost;
+    int exit_condition;
     t_map map;
     t_localisation localisation;
 

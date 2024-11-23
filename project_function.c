@@ -19,7 +19,35 @@
 
 
 
-t_node* create_node(int nb_available_mvmt, int* mvmt_list, int value, int move_choose){
+//-------------------------------------------------------------------------------------------------------
+
+int update_loc(t_node* current_node){
+    int approve;
+    t_move chosen_move = (t_move)current_node->chosen_move;
+
+
+    if (current_node->previous_node != NULL) {
+
+        current_node->localisation = move(current_node->previous_node->localisation, chosen_move); //update localisation
+        current_node->map = current_node->previous_node->map;
+
+    } //for the root node, updated in the create tree function
+    int y_max = current_node->map.y_max, x_max = current_node->map.y_max; //Border of the map
+    approve = isValidLocalisation(current_node->localisation.pos, x_max, y_max);
+
+    return approve;
+
+}
+
+int calculate_cost(t_node* current_node){
+    int cost;
+    int x = current_node->localisation.pos.x, y = current_node->localisation.pos.y;
+    cost = current_node->map.costs[x][y]+(current_node->previous_node->value_cost);
+
+    return cost;
+}
+
+t_node* create_node(int depth, int* mvmt_list, int value, int move_choose, int nb_available_mvmt, t_node* previous_node){
 
     t_node* new_node = (t_node*) malloc(sizeof(t_node));
 
@@ -54,7 +82,6 @@ t_node* create_node(int nb_available_mvmt, int* mvmt_list, int value, int move_c
 }
 
 
-
 /*void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_list, int total_moves){
 
 
@@ -66,6 +93,24 @@ t_node* create_node(int nb_available_mvmt, int* mvmt_list, int value, int move_c
         for (int j=0; j<nb_available_mvmt; j++){
             if (j != i) {
                 new_mvmt_list[k++] = mvmt_list[j];
+
+
+//function work like a postfix tree allocation
+void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_list, int depth){
+    if (depth >= 5) {
+        return;
+    }
+
+    if (depth <= 5) {
+        //new_mvmt list
+        for (int i = 0; i < nb_available_mvmt; i++) {
+            int *new_mvmt_list = (int *) malloc((nb_available_mvmt - 1) * sizeof(int));
+            int k = 0; //because for the iteration j it will be to big compare to the size of the new list
+
+            for (int j = 0; j < nb_available_mvmt; j++) {
+                if (j != i) {
+                    new_mvmt_list[k++] = mvmt_list[j];
+                }
             }
         }
         if (i != total_moves-1) {
@@ -188,7 +233,6 @@ t_map choose_map (){
         case 4:
             printf("Enter the exact name of the map you want to load:\n");
             char name[100];
-
             scanf("%s", name);
             char path[100] = "..\\\\maps\\\\";
             strcat(path, name);
@@ -199,3 +243,40 @@ t_map choose_map (){
     }
     return map;
 }
+
+//pseudo code while waiting for tree function
+/*
+node** minimal_route(tree){// This function will test each combination of routes using the 5 moves then keep the lowest wieghed one
+
+    node** all_route[126]; // 9 among 5 is 126 each element is a route from root to leaf
+    for (int a=0; a<9;a++)
+    {
+        all_route[a]=create_tree(tree->*children[a])
+        for(int b=0; b<8;b++)
+        {
+            all_route[a] = add_leaf(all_route[a],
+            for(int c=0; c<7; c++)
+            {
+                for(int c=0; c<6;c++)
+                {
+                    for(int d=0; d<5;d++)
+                    {
+                        for(int e=0;e<4;e++)
+                        {
+                            for(int f=0; f=3;f++)
+                            {
+                                for(int g=0; g<2;g++)
+                                {
+                                    for(int h=0;h<1;h++)
+                                    {
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}*/

@@ -55,4 +55,7 @@ t_map createMapFromFile(char *);
  */
 void displayMap(t_map);
 
+//create by Brian
+void displayMap_robot(t_map);
+
 #endif //UNTITLED1_MAP_H

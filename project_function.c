@@ -10,7 +10,6 @@
 #include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <stdio.h>
 
 
 #define TOTAL_MOVES 9
@@ -71,7 +70,7 @@ int* moveexecution() {
 //-------------------------------------------------------------------------------------------------------
 
 
-t_node* create_node(int depth, int* mvmt_list, int value, int move_choose, int nb_available_mvmt, t_node* previous_node){
+t_node* create_node(int depth, int* mvmt_list, int move_choose, int nb_available_mvmt, t_node* previous_node){
 
     t_node* new_node = (t_node*) malloc(sizeof(t_node));
 
@@ -96,7 +95,7 @@ t_node* create_node(int depth, int* mvmt_list, int value, int move_choose, int n
 //allocation nb of available mvmts
     new_node->total_moves = nb_available_mvmt;
 
-//allocatuon of level correponding
+//allocation of the corresponding level
     new_node->depth = depth;
 
 //allocation of the localisation and cost_value
@@ -105,7 +104,7 @@ t_node* create_node(int depth, int* mvmt_list, int value, int move_choose, int n
     if (exit == 1) {
         new_node->value_cost = calculate_cost(new_node);
     }
-
+    new_node->base_station = at_the_base_station(new_node);
     return new_node;
 }
 
@@ -134,6 +133,20 @@ int calculate_cost(t_node* current_node){
 
     return cost;
 }
+
+int at_the_base_station(t_node* current_node) {
+    int x = current_node->localisation.pos.x;
+    int y = current_node->localisation.pos.y;
+
+    //Ensure that MARC is not out of the map
+    if (x >= 0 && x < current_node->map.x_max && y >= 0 && y < current_node->map.y_max) {
+        if (current_node->map.soils[x][y] == BASE_STATION) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
 //function work like a postfix tree allocation
 void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_list, int depth){
     if (depth >= 5) {
@@ -151,10 +164,16 @@ void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_
                     new_mvmt_list[k++] = mvmt_list[j];
                 }
             }
-            t_node *new_node = create_node(depth + 1, new_mvmt_list, 33333, mvmt_list[i], nb_available_mvmt - 1, root_node);
-            if (new_node->value_cost >= 10000 || new_node->exit_condition == 0){
+            t_node *new_node = create_node(depth + 1, new_mvmt_list, mvmt_list[i], nb_available_mvmt - 1, root_node);
+            if (new_node->value_cost >= 10000 || new_node->exit_condition == 0 /*|| new_node->base_station == 1*/) {
                 root_node->list_node[i] = NULL;
             }
+            /*else if (new_node->base_station == 1) {
+
+                new_node->list_node = NULL;
+                root_node->list_node[i] = new_node;
+
+            }*/
             else {
                 root_node->list_node[i] = new_node;
             }
@@ -176,13 +195,13 @@ void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_
 }
 
 
-t_tree create_tree(int* mvmt_list){
+t_tree create_tree(int* mvmt_list, t_map map){
     t_tree tree;
     //initialisation of the root
-    tree.root_node = create_node(0, mvmt_list, 999999999, 9999999, TOTAL_MOVES, NULL);
+    tree.root_node = create_node(0, mvmt_list, 9999999, TOTAL_MOVES, NULL);
     tree.root_node->localisation = loc_init(3, 3, NORTH);
     tree.root_node->value_cost = 0;
-    tree.root_node->map = createTrainingMap(); //temporary map
+    tree.root_node->map = map; //temporary map
 
 
     build_tree_recursively(tree.root_node, TOTAL_MOVES, mvmt_list, 0);
@@ -198,10 +217,15 @@ void display_tree(t_node* node) {
     //informations of the nodes
     printf("Node:\n");
     printf("  Depth        : %d\n", node->depth);
-    printf("  Value        : %d\n", node->value_cost);
     printf("  Chosen Move  : %d\n", node->chosen_move);
     printf("  Total Moves  : %d\n", node->total_moves);
     printf("  Cost of the pixel : %d\n", node->value_cost);
+    printf("  At the base station ? : ");
+    if (node->base_station == 1) {
+        printf("Yes\n");
+    } else {
+        printf("No\n");
+    }
 
     printf("  Available Mvmt: ");
     for (int i = 0; i < node->total_moves; i++) {
@@ -222,13 +246,60 @@ void display_tree(t_node* node) {
     }
 }
 
-/*
-    for(int i=0; i<tree.root_node->total_moves; i++){
-        printf("[");
-        for(int j=0; j<tree.root_node->list_node[i]->total_moves; j++){
-            printf("%d", tree.root_node->list_node[i]->available_mvmt[j]);
-        }
-        printf("] ");
+
+
+void print_base_station_nodes(t_node* node) {
+    if (node == NULL) {
+        return;
     }
+
+    // Check if the current node is at the base station
+    if (node->base_station == 1) {
+        printf("Node at base station:\n");
+        printf("  Depth        : %d\n", node->depth);
+        printf("  Chosen Move  : %d\n", node->chosen_move);
+        printf("  Total Moves  : %d\n", node->total_moves);
+        printf("  Cost of the pixel : %d\n", node->value_cost);
+        printf("  Available Mvmt: ");
+        for (int i = 0; i < node->total_moves; i++) {
+            printf("%d ", node->available_mvmt[i]);
+        }
+        printf("\n");
+    }
+
+    // Recursively check children nodes
+    for (int i = 0; i < node->total_moves; i++) {
+        if (node->list_node[i] != NULL) {
+            print_base_station_nodes(node->list_node[i]);
+        }
+    }
+}
+/*
+//give all the position from the last to the first node
+t_queue list_position(t_node* node){
+    int iteration = node->depth;
+    t_node* curr = node;
+    t_queue queue = createQueue(iteration);
+
+    for (int i=0; i<iteration; i++){
+        enqueue(&queue, curr->localisation.pos);
+        curr = curr->previous_node;
+    }
+    return queue;
+}
 */
+
+/*
+//give the list of nodes before a node in a stack to have the localisation in order
+t_stack node_stack_list(t_node* node){
+    t_stack stack_list = createStack(node->depth);
+    t_node* temp = node;
+
+    for(int i=0; i<node->depth; i++){
+        push(&stack_list, temp);
+        temp = temp->previous_node;
+    }
+}
+*/
+
 

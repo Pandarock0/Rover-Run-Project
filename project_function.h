@@ -7,6 +7,8 @@
 
 #include "moves.h"
 #include "map.h"
+#include "stack.h"
+#include "queue.h"
 
 void resetCount();
 int* moveexecution();
@@ -26,6 +28,7 @@ typedef struct node{
     int exit_condition;
     t_map map;
     t_localisation localisation;
+    int base_station;
 
 } t_node;
 
@@ -33,9 +36,9 @@ typedef struct s_tree{
     t_node* root_node;
 } t_tree;
 
-t_node* create_node(int depth, int* mvmt_list, int value, int move_choose, int nb_available_mvmt, t_node* previous_node);
+t_node* create_node(int depth, int* mvmt_list, int move_choose, int nb_available_mvmt, t_node* previous_node);
 
-t_tree create_tree(int* mvmt_list);
+t_tree create_tree(int* mvmt_list, t_map);
 
 
 void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_list, int total_moves);
@@ -46,6 +49,8 @@ int update_loc(t_node* current_node);
 
 int calculate_cost(t_node*);
 
+void print_base_station_nodes(t_node* node);
 
+//t_queue list_position(t_node* node);
 
 #endif //UNTITLED1_PROJECT_FUNCTION_H

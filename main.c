@@ -2,6 +2,8 @@
 #include "map.h"
 #include "project_function.h"
 
+
+
 int main() {
     t_map map = createMapFromFile("..\\maps\\example1.map");
     printf("Map created with dimensions %d x %d\n", map.y_max, map.x_max);
@@ -24,16 +26,41 @@ int main() {
     }
     displayMap(map);
 
-    //function test part
 
 
     srand(time(NULL));
-    int* list_mvmt = moveexecution();
+    int *list_mvmt = moveexecution();
+    map = createTrainingMap();
 
-    t_tree tree = create_tree(list_mvmt);
+    t_tree tree = create_tree(list_mvmt, map);
 
-    display_tree(tree.root_node);
 
+    while (1) {
+
+        int val;
+        printf("Testing function :");
+        printf("\n1.List of random movement\n2.Display some nodes of the tree (verification test)\n3.Display nodes located at the base\n4.Display Map\n5.Exit\n");
+        scanf("%d", &val);
+        if (val == 1){
+            printf("\n[");
+            for(int i=0; i<9; i++){
+                printf(" %d ", list_mvmt[i]);
+            }
+            printf("]\n");
+        }
+        else if (val == 2){
+            display_tree(tree.root_node);
+        }
+        else if (val == 3){
+            print_base_station_nodes(tree.root_node);
+        }
+        else if (val == 4){
+            displayMap(map);
+        }
+        else if (val == 5 || val != 1 || val != 2 || val != 3 || val !=4){
+            break;
+        }
+    };
     /*
     for(int i=0; i<9;i++){
         printf("%d", list_mvmt[i]);

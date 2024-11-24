@@ -6,6 +6,7 @@
 #define UNTITLED1_MAP_H
 
 #define COST_UNDEF 65535
+
 /**
  * @brief Enum for the possible soils of the map
  */
@@ -47,7 +48,7 @@ t_map createMapFromFile(char *);
  * @param none
  * @return a standard map
  */
- t_map createTrainingMap();
+t_map createTrainingMap();
 
 /**
  * @brief display the map with characters

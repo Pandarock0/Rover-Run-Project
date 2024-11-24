@@ -2,9 +2,10 @@
 // Created by flasque on 19/10/2024.
 //
 
-#include <stdlib.h>
+#include <malloc.h>
 #include <assert.h>
 #include "stack.h"
+
 
 /**
  * @brief Function to create a stack
@@ -18,7 +19,7 @@ t_stack createStack(int size)
     t_stack stack;
     stack.size = size;
     stack.nbElts = 0;
-    stack.values = (int *)malloc(size * sizeof(int));
+    stack.values = stack.values = (int*)malloc(size * sizeof(int));
     return stack;
 }
 
@@ -36,6 +37,13 @@ void push(t_stack *p_stack, int value)
     p_stack->nbElts++;
     return;
 }
+ /*
+void push(t_stack* p_stack, t_node* node) {
+    // the stack must not be full
+    assert(p_stack->nbElts < p_stack->size);
+    p_stack->nodes[p_stack->nbElts] = node;
+    p_stack->nbElts++;
+}*/
 
 /**
  * @brief Function to pop a value from the stack
@@ -49,6 +57,13 @@ int pop(t_stack *p_stack)
     p_stack->nbElts--;
     return p_stack->values[p_stack->nbElts];
 }
+ /*
+t_node* pop(t_stack* p_stack) {
+    // the stack must not be empty
+    assert(p_stack->nbElts > 0);
+    p_stack->nbElts--;
+    return p_stack->nodes[p_stack->nbElts];
+}*/
 
 /**
  * @brief Function to get the top value of the stack
@@ -61,3 +76,9 @@ int top(t_stack stack)
     assert(stack.nbElts > 0);
     return stack.values[stack.nbElts - 1];
 }
+/*
+t_node* top(t_stack stack) {
+    // the stack must not be empty
+    assert(stack.nbElts > 0);
+    return stack.nodes[stack.nbElts - 1];
+}*/

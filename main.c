@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "map.h"
+#include <time.h>
+#include <stdlib.h>
 #include "project_function.h"
 
 
@@ -39,7 +40,7 @@ int main() {
 
         int val;
         printf("Testing function :");
-        printf("\n1.List of random movement\n2.Display some nodes of the tree (verification test)\n3.Display nodes located at the base\n4.Display Map\n5.Exit\n");
+        printf("\n1.List of random movement\n2.Display some nodes of the tree (You need to stop the program)\n3.Display nodes located at the base\n4.Display MARC displacement (test)\n5.Exit\n");
         scanf("%d", &val);
         if (val == 1){
             printf("\n[");
@@ -55,17 +56,12 @@ int main() {
             print_base_station_nodes(tree.root_node);
         }
         else if (val == 4){
-            displayMap(map);
+            displayMap_robot(map, test_function(), 3);
         }
         else if (val == 5 || val != 1 || val != 2 || val != 3 || val !=4){
             break;
         }
-    };
-    /*
-    for(int i=0; i<9;i++){
-        printf("%d", list_mvmt[i]);
     }
-    */ // Test for random mouvements list
 
     return 0;
 }

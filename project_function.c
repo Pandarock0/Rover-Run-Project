@@ -274,6 +274,19 @@ void print_base_station_nodes(t_node* node) {
         }
     }
 }
+
+t_node** test_function(){
+    t_node** list_node = (t_node**) malloc(sizeof(t_node*));
+    list_node[0] = (t_node*) malloc(sizeof(t_node));
+    list_node[1] = (t_node*) malloc(sizeof(t_node));
+    list_node[2] = (t_node*) malloc(sizeof(t_node));
+
+    list_node[0]->localisation = loc_init(3, 3, NORTH);
+    list_node[1]->localisation = loc_init(3, 4, WEST);
+    list_node[2]->localisation = loc_init(3, 5, SOUTH);
+    return list_node;
+}
+
 /*
 //give all the position from the last to the first node
 t_queue list_position(t_node* node){

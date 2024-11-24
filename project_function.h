@@ -5,10 +5,11 @@
 #ifndef UNTITLED1_PROJECT_FUNCTION_H
 #define UNTITLED1_PROJECT_FUNCTION_H
 
+
+#include "loc.h"
 #include "moves.h"
 #include "map.h"
-#include "stack.h"
-#include "queue.h"
+
 
 void resetCount();
 int* moveexecution();
@@ -40,7 +41,6 @@ t_node* create_node(int depth, int* mvmt_list, int move_choose, int nb_available
 
 t_tree create_tree(int* mvmt_list, t_map);
 
-
 void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_list, int total_moves);
 
 void display_tree(t_node* node); //test function
@@ -51,6 +51,14 @@ int calculate_cost(t_node*);
 
 void print_base_station_nodes(t_node* node);
 
+int at_the_base_station(t_node* current_node);
+
+t_node** test_function();
+
+//create by Brian DON'T put in map.c
+void displayMap_robot(t_map, t_node**, int);
+
 //t_queue list_position(t_node* node);
+//t_stack node_stack_list(t_node* node);
 
 #endif //UNTITLED1_PROJECT_FUNCTION_H

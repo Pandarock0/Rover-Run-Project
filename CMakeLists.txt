@@ -10,4 +10,6 @@ add_executable(main
         loc.c
         stack.c
         queue.c
-        moves.c)
+        moves.c
+        Interface.h
+        Interface.c)

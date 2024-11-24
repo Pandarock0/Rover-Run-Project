@@ -12,7 +12,6 @@
 #include <string.h>
 
 
-
 #define TOTAL_MOVES 9
 
 
@@ -66,108 +65,6 @@ int* moveexecution() {
     }
 
     return moves;
-}
-
-t_map choose_map() {
-    printf("Choose a map to load:\n");
-    printf("1. example1.map\n");
-    printf("2. training.map\n");
-    printf("3. projectmap.map\n");
-    printf("4. Other map\n");
-    int mapchoice;
-    t_map map;
-    scanf("%d", &mapchoice);
-    switch (mapchoice) {
-        case 1: {
-            map = createMapFromFile("..\\maps\\example1.map");
-            printf("Map created with dimensions %d x %d\n", map.y_max, map.x_max);
-            for (int i = 0; i < map.y_max; i++) {
-                for (int j = 0; j < map.x_max; j++) {
-                    printf("%d ", map.soils[i][j]);
-                }
-                printf("\n");
-            }
-            // printf the costs, aligned left 5 digits
-            for (int i = 0; i < map.y_max; i++) {
-                for (int j = 0; j < map.x_max; j++) {
-                    printf("%-5d ", map.costs[i][j]);
-                }
-                printf("\n");
-            }
-            displayMap(map);
-            break;
-        }
-
-        case 2: {
-            map = createMapFromFile("..\\maps\\training.map");
-            printf("Map created with dimensions %d x %d\n", map.y_max, map.x_max);
-            for (int i = 0; i < map.y_max; i++) {
-                for (int j = 0; j < map.x_max; j++) {
-                    printf("%d ", map.soils[i][j]);
-                }
-                printf("\n");
-            }
-            // printf the costs, aligned left 5 digits
-            for (int i = 0; i < map.y_max; i++) {
-                for (int j = 0; j < map.x_max; j++) {
-                    printf("%-5d ", map.costs[i][j]);
-                }
-                printf("\n");
-            }
-            displayMap(map);
-            break;
-        }
-
-        case 3: {
-            map = createMapFromFile("..\\maps\\test.map");
-            printf("Map created with dimensions %d x %d\n", map.y_max, map.x_max);
-            for (int i = 0; i < map.y_max; i++) {
-                for (int j = 0; j < map.x_max; j++) {
-                    printf("%d ", map.soils[i][j]);
-                }
-                printf("\n");
-            }
-            // printf the costs, aligned left 5 digits
-            for (int i = 0; i < map.y_max; i++) {
-                for (int j = 0; j < map.x_max; j++) {
-                    printf("%-5d ", map.costs[i][j]);
-                }
-                printf("\n");
-            }
-            displayMap(map);
-            break;
-        }
-
-        case 4: {
-            printf("Enter the exact name of the map you want to load:\n");
-            char name[100];
-            scanf("%s", name);
-            char path[100] = "..\\\\maps\\\\";
-            strcat(path, name);
-            char finalpath[100] = ".map";
-            strcat(path, finalpath);
-            printf("%s \n", path);
-            map = createMapFromFile(path);
-            printf("Map created with dimensions %d x %d\n", map.y_max, map.x_max);
-            for (int i = 0; i < map.y_max; i++) {
-                for (int j = 0; j < map.x_max; j++) {
-                    printf("%d ", map.soils[i][j]);
-                }
-                printf("\n");
-            }
-            // printf the costs, aligned left 5 digits
-            for (int i = 0; i < map.y_max; i++) {
-                for (int j = 0; j < map.x_max; j++) {
-                    printf("%-5d ", map.costs[i][j]);
-                }
-                printf("\n");
-            }
-            displayMap(map);
-        }
-            break;
-
-    }
-    return map;
 }
 
 
@@ -317,6 +214,7 @@ void display_tree(t_node* node) {
     if (node == NULL) {
         return;
     }
+
     //informations of the nodes
     printf("Node:\n");
     printf("  Depth        : %d\n", node->depth);
@@ -478,6 +376,7 @@ void display_best_move(t_node** node_list, int node_count) {
 
 
 //Abdou Part-----------------------------------------------------------------------------------------------------
+//src for source as in original
 t_node *copy_node(t_node *src) {
     if (!src) {
         return NULL;
@@ -523,7 +422,7 @@ void findMinimumRoute(t_node *node, t_tree *currentPath, int currentWeight, int 
     }
 
     // If this is a leaf node or the node has value 1, check if the path is the best
-    if ((node->total_moves == 0 || node->value_cost == 1) && node!=currentPath->root_node) {
+    if (node->total_moves == 0 || node->value_cost == 1) {
         if (currentWeight < bestRoute->weight) {
             // Update the best route
             bestRoute->weight = currentWeight;
@@ -590,6 +489,78 @@ Route minimum_route(t_tree tree) {
     free(currentPath);
 
     return bestRoute;
+}
+
+t_node** Best_route_node(t_node* node, int* size_temp, t_node** temp, t_node** best_route_node) {
+    if (node == NULL) {
+        return NULL;
+    }
+
+    if (node->base_station == 1) {
+        temp = realloc(temp, (*size_temp + 1) * sizeof(t_node*)); // Augmenter dynamiquement la taille de temp
+        if (temp == NULL) {
+            fprintf(stderr, "Memory allocation failed\n");
+            exit(EXIT_FAILURE);
+        }
+        temp[*size_temp] = node;
+        (*size_temp)++;
+    }
+
+    for (int i = 0; i < node->total_moves; i++) {
+        if (node->list_node[i] != NULL) {
+            temp = Best_route_node(node->list_node[i], size_temp, temp, best_route_node);
+        }
+    }
+
+    if (*size_temp > 0 && best_route_node[0] == NULL) {
+        best_route_node[0] = temp[0];
+    }
+
+    for (int i = 0; i < *size_temp; i++) {
+        if (best_route_node[0]->depth > temp[i]->depth) {
+            best_route_node[0] = temp[i];
+        } else if (best_route_node[0]->depth == temp[i]->depth) {
+            if (temp[i]->value_cost < best_route_node[0]->value_cost) {
+                best_route_node[0] = temp[i];
+            }
+        }
+    }
+
+    return temp;
+}
+
+
+t_node** Best_route_node_list(t_node** best_route_node) {
+    if (best_route_node == NULL || best_route_node[0] == NULL) {
+        return NULL;
+    }
+    int iteration = best_route_node[0]->depth;
+    if (iteration <= 0) {
+        return NULL;
+    }
+
+    t_node** best_route = (t_node**)malloc(sizeof(t_node*) * iteration);
+    if (best_route == NULL) {
+        fprintf(stderr, "Memory allocation failed\n");
+        exit(EXIT_FAILURE);
+    }
+    t_node* current = best_route_node[0];
+    for (int i = 0; i < iteration; i++) {
+        if (current == NULL) {
+            break;
+        }
+        best_route[i] = current;
+        current = current->previous_node;
+    }
+
+
+    for (int i = 0, j = iteration - 1; i < j; i++, j--) {
+        t_node* temp = best_route[i];
+        best_route[i] = best_route[j];
+        best_route[j] = temp;
+    }
+
+    return best_route;
 }
 
 

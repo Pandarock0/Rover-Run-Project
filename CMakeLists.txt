@@ -17,4 +17,7 @@ add_executable(untitled1 main.c
         random.c
         random.h
         project_function.c
-        project_function.h)
+        project_function.h
+        project_function.c
+        interface.c
+        interface.h)

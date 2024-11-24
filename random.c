@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "moves.h"
 #include "random.h"
-
+/*
 #define TOTAL_MOVES 9
 
 
@@ -57,4 +57,4 @@ int* moveexecution() {
 
     return moves;
 }
-
+*/

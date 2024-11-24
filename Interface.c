@@ -93,17 +93,12 @@ LRESULT CALLBACK MainWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPar
                     20, 100, 200, 30,
                     hwnd, (HMENU)3, hInst, NULL);
 
-            btnDisplayCosts = CreateWindow(
-                    "BUTTON", "Display Costs",
-                    WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
-                    20, 140, 200, 30,
-                    hwnd, (HMENU)4, hInst, NULL);
 
             btnExit = CreateWindow(
                     "BUTTON", "Exit",
                     WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
                     20, 180, 200, 30,
-                    hwnd, (HMENU)5, hInst, NULL);
+                    hwnd, (HMENU)4, hInst, NULL);
 
             // Create a static area to display the map
             mapDisplayArea = CreateWindow(
@@ -229,7 +224,7 @@ LRESULT CALLBACK MapWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPara
                     break;
 
                 case 103:
-                    strcpy(selectedMap, "..\\maps\\projetcmap.map");
+                    strcpy(selectedMap, "..\\maps\\test.map");
                     break;
 
                 case 104: {

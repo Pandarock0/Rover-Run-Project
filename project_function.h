@@ -10,9 +10,7 @@
 #include "map.h"
 
 
-void resetCount();
-int* moveexecution();
-t_move selectRandomMove();
+t_map choose_map();
 
 typedef struct node{
 
@@ -182,8 +180,6 @@ Route minimum_route(t_tree tree);
  * @return Pointer to the copied node.
  */
 t_node* deep_copy_node(t_node* src);
-
-t_map choose_map();
 
 void free_tree(t_node*);
 

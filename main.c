@@ -11,7 +11,8 @@ void menu(){
     printf("3. Display nodes of the tree (you need to stop the program)\n");
     printf("4. Display nodes located at the base\n");
     printf("5. Display MARC displacement (test)\n");
-    printf(". Complete ");
+    printf("6. Complete example of the use");
+    printf("Else: Exit\n");
 
 
 
@@ -54,17 +55,11 @@ void menu(){
             menu();
             break;
         case 5:
-            map = createTrainingMap();
-            tree = create_tree(list_mvmt, map);
-            minimum_route(tree);
-            display_tree(tree.root_node);
+            displayMap_robot(map, test_function(), 3);
             menu();
             break;
-        case 6:
-            map= choose_map();
-            tree = create_tree(list_mvmt, map);
-            minimum_route(tree);
-            menu();
+
+        default:
             break;
 
     }
@@ -137,6 +132,6 @@ int main() {
             minimum_route(tree);
         }
     }
-*/
+    */
     return 0;
 }

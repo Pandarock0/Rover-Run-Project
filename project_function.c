@@ -317,7 +317,6 @@ void display_tree(t_node* node) {
     if (node == NULL) {
         return;
     }
-
     //informations of the nodes
     printf("Node:\n");
     printf("  Depth        : %d\n", node->depth);

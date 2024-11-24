@@ -181,7 +181,7 @@ Route minimum_route(t_tree tree);
  * @param src Pointer to the node to copy.
  * @return Pointer to the copied node.
  */
-t_node* copy_node(t_node* src);
+t_node* deep_copy_node(t_node* src);
 
 t_map choose_map();
 

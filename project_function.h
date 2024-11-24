@@ -37,6 +37,14 @@ typedef struct s_tree{
     t_node* root_node;
 } t_tree;
 
+//Structure from Abdou Samad
+typedef struct{
+    t_tree* path;
+    int length;
+    int weight;
+
+}Route;
+
 t_node* create_node(int depth, int* mvmt_list, int move_choose, int nb_available_mvmt, t_node* previous_node);
 
 t_tree create_tree(int* mvmt_list, t_map);
@@ -59,6 +67,13 @@ t_node** test_function();
 void displayMap_robot(t_map, t_node**, int);
 
 void display_best_move(t_node**, int);
+
+void findMinimumRoute(t_node *node, t_tree *currentPath, int currentWeight, int currentLength, Route *bestRoute);
+
+Route minimum_route(t_tree tree);
+
+t_node *copy_node(t_node* );
+
 
 //t_queue list_position(t_node* node);
 //t_stack node_stack_list(t_node* node);

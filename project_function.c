@@ -501,6 +501,19 @@ t_node *deep_copy_node(t_node *src) {
     return copy;
 }
 
+void free_tree(t_node *node) {
+    if (!node) {
+        return;
+    }
+    if (node->list_node) {
+        for (int i = 0; i < node->total_moves; i++) {
+            free_tree(node->list_node[i]);
+        }
+        free(node->list_node);
+    }
+    free(node);
+}
+
 
 // Recursive function to find the minimum route
 void findMinimumRoute(t_node *node, t_tree *currentPath, int currentWeight, int currentLength, Route *bestRoute) {

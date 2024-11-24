@@ -31,9 +31,10 @@ int main() {
 
     srand(time(NULL));
     int *list_mvmt = moveexecution();
-    map = createTrainingMap();
+    //map = createTrainingMap();
 
     t_tree tree = create_tree(list_mvmt, map);
+
 
 
     while (1) {

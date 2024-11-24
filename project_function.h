@@ -10,7 +10,9 @@
 #include "map.h"
 
 
-t_map choose_map();
+void resetCount();
+int* moveexecution();
+t_move selectRandomMove();
 
 typedef struct node{
 
@@ -42,6 +44,17 @@ typedef struct{
 
 }Route;
 
+
+
+typedef struct s_stack{
+  int size;
+  t_node** node;
+  int nbElts;
+}t_stack;
+
+t_node** Best_route_node(t_node* node, int* size_temp, t_node** temp, t_node**best_route_node);
+
+t_node** Best_route_node_list(t_node** best_route_node);
 
 /**
  * @brief Resets the availability of all movements to their initial values.
@@ -165,6 +178,7 @@ void display_best_move(t_node** node_list, int node_count);
  * @param bestRoute Pointer to the structure storing the best route found.
  */
 void findMinimumRoute(t_node *node, t_tree *currentPath, int currentWeight, int currentLength, Route *bestRoute);
+
 /**
  * @brief Finds the minimum route in the decision tree.
  * Initializes the search for the best route using the root node.
@@ -179,7 +193,7 @@ Route minimum_route(t_tree tree);
  * @param src Pointer to the node to copy.
  * @return Pointer to the copied node.
  */
-t_node *copy_node(t_node* );
+t_node* copy_node(t_node* src);
 
 
 

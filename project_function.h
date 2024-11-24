@@ -73,6 +73,7 @@ t_node** test_function();
 void displayMap_robot(t_map, t_node**, int);
 
 void display_best_move(t_node**, int);
+t_node** tree_to_node_array(t_tree* tree);
 
 //t_queue list_position(t_node* node);
 //t_stack node_stack_list(t_node* node);

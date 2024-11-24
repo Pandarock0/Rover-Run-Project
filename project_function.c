@@ -489,6 +489,30 @@ Route minimum_route(t_tree tree) {
     return bestRoute;
 }
 
+t_node** tree_to_node_array(t_tree* tree) {
+    if (tree == NULL || tree->root_node == NULL)
+    {
+        return NULL;
+    }
+    int max_depth = 5;
+
+    // Allocate memory for array
+    t_node** node_array = (t_node**)malloc(max_depth * sizeof(t_node*));
+
+    t_node* current_node = tree->root_node;
+    int i = 0;
+
+    // Traverse tree and add each node
+    while (current_node != NULL && i< max_depth) {
+        node_array[i] = current_node;
+        i++;
+        current_node = current_node->list_node[0];  // next child
+    }
+
+    return node_array;
+}
+
+
 /*
 //give all the position from the last to the first node
 t_queue list_position(t_node* node){

@@ -8,6 +8,7 @@
 #include "winuser.h"
 #include "interface.h"
 
+//Program to display the interface of the project (you need to add /* and */ at the beginning and end of the main)
 
 int initial_availabilitygui[] = {22, 15, 7, 7, 21, 21, 7};
 

@@ -478,55 +478,30 @@ void display_best_move(t_node** node_list, int node_count) {
 
 
 //Abdou Part-----------------------------------------------------------------------------------------------------
-t_node *deep_copy_node(t_node *src) {
+t_node *copy_node(t_node *src) {
     if (!src) {
         return NULL;
     }
     t_node *copy = (t_node *)malloc(sizeof(t_node));
+
     memcpy(copy, src, sizeof(t_node));
-
-    // Deep copy list_node array
-    if (src->total_moves > 0) {
-        copy->list_node = (t_node **)malloc(src->total_moves * sizeof(t_node *));
-        for (int i = 0; i < src->total_moves; i++) {
-            copy->list_node[i] = deep_copy_node(src->list_node[i]);
-        }
-    } else {
-        copy->list_node = NULL;
-    }
-
-    // Nullify pointers that shouldn't be shared
+    copy->available_mvmt = NULL;
+    copy->list_node = NULL;
     copy->previous_node = NULL;
     return copy;
 }
 
-void free_tree(t_node *node) {
-    if (!node) {
-        return;
-    }
-    if (node->list_node) {
-        for (int i = 0; i < node->total_moves; i++) {
-            free_tree(node->list_node[i]);
-        }
-        free(node->list_node);
-    }
-    free(node);
-}
-
-
 // Recursive function to find the minimum route
-void findMinimumRoute(t_node *node, t_tree *currentPath, int currentWeight, int currentLength, Route *bestRoute, int isRoot) {
+void findMinimumRoute(t_node *node, t_tree *currentPath, int currentWeight, int currentLength, Route *bestRoute)
+{
     if (!node) {
         return;
     }
 
-    // Skip adding the root node's value to weight and length
-    if (!isRoot) {
-        currentWeight += node->value_cost;
-        currentLength++;
-    }
+    // Add the node's value to the current weight
+    currentWeight += node->value_cost;
 
-    // Add the current node to the path
+    // add the current node to degenerate tree path
     t_node *copiedNode = copy_node(node);
     if (currentPath->root_node == NULL) {
         currentPath->root_node = copiedNode;
@@ -539,37 +514,39 @@ void findMinimumRoute(t_node *node, t_tree *currentPath, int currentWeight, int 
         temp->list_node[0] = copiedNode;
     }
 
-    // Stop recursion if the current weight exceeds the best route's weight
+    currentLength++;
+
+    // If weight exceeds the best route's weight, abort the mission soldier ! Abort the mission !
     if (currentWeight >= bestRoute->weight) {
         free(copiedNode);
         return;
     }
 
-    // If this is a leaf node or has a special condition, check the route
-    if (node->total_moves == 0 || node->value_cost == 1) {
+    // If this is a leaf node or the node has value 1, check if the path is the best
+    if ((node->total_moves == 0 || node->value_cost == 1) && node!=currentPath->root_node) {
         if (currentWeight < bestRoute->weight) {
             // Update the best route
             bestRoute->weight = currentWeight;
             bestRoute->length = currentLength;
 
-            // Free the previous best path and copy the new path
+            // delete existing best path to search for a better one
             if (bestRoute->path) {
-                free_tree(bestRoute->path->root_node);
                 free(bestRoute->path);
             }
 
+            // Copy the current path to the best path
             bestRoute->path = (t_tree *)malloc(sizeof(t_tree));
             bestRoute->path->root_node = copy_node(currentPath->root_node);
         }
         return;
     }
 
-    // Traverse children
+    // traverse each child
     for (int i = 0; i < node->total_moves; i++) {
-        findMinimumRoute(node->list_node[i], currentPath, currentWeight, currentLength, bestRoute, 0);
+        findMinimumRoute(node->list_node[i], currentPath, currentWeight, currentLength, bestRoute);
     }
 
-    // Backtrack: Remove the last node from the current path
+    // Backtrack: Remove the last node from the current patht to check for a better one
     if (currentPath->root_node) {
         t_node *temp = currentPath->root_node;
         t_node *prev = NULL;
@@ -588,12 +565,10 @@ void findMinimumRoute(t_node *node, t_tree *currentPath, int currentWeight, int 
     }
 }
 
-
 // Main function to find minimum route in tree
-void findMinimumRoute(t_node *node, t_tree *currentPath, int currentWeight, int currentLength, Route *bestRoute, int isRoot);
-
 Route minimum_route(t_tree tree) {
     if (tree.root_node == NULL) {
+        // If tree empty, return empty route
         Route emptyRoute = {NULL, 0, 0};
         return emptyRoute;
     }
@@ -601,15 +576,15 @@ Route minimum_route(t_tree tree) {
     // Initialize best route
     Route bestRoute;
     bestRoute.path = NULL;
-    bestRoute.weight = 1000000;
+    bestRoute.weight = 100000000;
     bestRoute.length = 0;
 
     // Temporary path for recursion
     t_tree *currentPath = (t_tree *)malloc(sizeof(t_tree));
     currentPath->root_node = NULL;
 
-    // Start recursive search, treating the root specially
-    findMinimumRoute(tree.root_node, currentPath, 0, 0, &bestRoute, 1);
+    // Start recursive search
+    findMinimumRoute(tree.root_node, currentPath, 0, 0, &bestRoute);
 
     // Free temporary path memory
     free(currentPath);

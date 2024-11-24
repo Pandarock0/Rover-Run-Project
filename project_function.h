@@ -42,6 +42,7 @@ typedef struct{
 
 }Route;
 
+
 /**
  * @brief Resets the availability of all movements to their initial values.
  * This is called at the beginning of each phase to ensure all moves can be used again.
@@ -164,7 +165,6 @@ void display_best_move(t_node** node_list, int node_count);
  * @param bestRoute Pointer to the structure storing the best route found.
  */
 void findMinimumRoute(t_node *node, t_tree *currentPath, int currentWeight, int currentLength, Route *bestRoute);
-
 /**
  * @brief Finds the minimum route in the decision tree.
  * Initializes the search for the best route using the root node.
@@ -179,9 +179,8 @@ Route minimum_route(t_tree tree);
  * @param src Pointer to the node to copy.
  * @return Pointer to the copied node.
  */
-t_node* deep_copy_node(t_node* src);
+t_node *copy_node(t_node* );
 
-void free_tree(t_node*);
 
 
 //t_queue list_position(t_node* node);

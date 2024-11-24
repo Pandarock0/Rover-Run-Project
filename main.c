@@ -60,7 +60,8 @@ int main() {
             displayMap_robot(map, test_function(), 3);
         }
         else if (val == 5) {
-            //display_best_move();
+            Route route = minimal_route(tree);
+            printf("%d",route->lenght);
         }
         else if (val == 6 || val != 1 || val != 2 || val != 3 || val !=4 || val != 5){
             break;

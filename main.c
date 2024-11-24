@@ -58,7 +58,10 @@ int main() {
         else if (val == 4){
             displayMap_robot(map, test_function(), 3);
         }
-        else if (val == 5 || val != 1 || val != 2 || val != 3 || val !=4){
+        else if (val == 5) {
+            //display_best_move();
+        }
+        else if (val == 6 || val != 1 || val != 2 || val != 3 || val !=4 || val != 5){
             break;
         }
     }

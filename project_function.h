@@ -58,6 +58,8 @@ t_node** test_function();
 //create by Brian DON'T put in map.c
 void displayMap_robot(t_map, t_node**, int);
 
+void display_best_move(t_node**, int);
+
 //t_queue list_position(t_node* node);
 //t_stack node_stack_list(t_node* node);
 

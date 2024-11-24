@@ -5,11 +5,11 @@
 #include "project_function.h"
 #include "loc.h"
 #include "map.h"
-#include "queue.h"
 #include "moves.h"
 #include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 
 #define TOTAL_MOVES 9
@@ -129,7 +129,7 @@ int update_loc(t_node* current_node){
 int calculate_cost(t_node* current_node){
     int cost;
     int x = current_node->localisation.pos.x, y = current_node->localisation.pos.y;
-    cost = current_node->map.costs[x][y]+(current_node->previous_node->value_cost);
+    cost = current_node->map.costs[y][x]+(current_node->previous_node->value_cost); //Don't do a mistake with x and y
 
     return cost;
 }
@@ -140,7 +140,7 @@ int at_the_base_station(t_node* current_node) {
 
     //Ensure that MARC is not out of the map
     if (x >= 0 && x < current_node->map.x_max && y >= 0 && y < current_node->map.y_max) {
-        if (current_node->map.soils[x][y] == BASE_STATION) {
+        if (current_node->map.soils[y][x] == BASE_STATION) { //Don't do a mistake with x and y
             return 1;
         }
     }
@@ -156,7 +156,7 @@ void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_
     if (depth <= 5) {
         //new_mvmt list
         for (int i = 0; i < nb_available_mvmt; i++) {
-            int *new_mvmt_list = (int *) malloc((nb_available_mvmt - 1) * sizeof(int));
+            int *new_mvmt_list = (int*) malloc((nb_available_mvmt - 1) * sizeof(int));
             int k = 0; //because for the iteration j it will be to big compare to the size of the new list
 
             for (int j = 0; j < nb_available_mvmt; j++) {
@@ -165,7 +165,7 @@ void build_tree_recursively(t_node* root_node, int nb_available_mvmt, int* mvmt_
                 }
             }
             t_node *new_node = create_node(depth + 1, new_mvmt_list, mvmt_list[i], nb_available_mvmt - 1, root_node);
-            if (new_node->value_cost >= 10000 || new_node->exit_condition == 0 /*|| new_node->base_station == 1*/) {
+            if ((new_node->value_cost >= 10000) || (new_node->exit_condition == 0) /*|| new_node->base_station == 1*/) {
                 root_node->list_node[i] = NULL;
             }
             /*else if (new_node->base_station == 1) {
@@ -285,6 +285,92 @@ t_node** test_function(){
     list_node[1]->localisation = loc_init(3, 4, WEST);
     list_node[2]->localisation = loc_init(3, 5, SOUTH);
     return list_node;
+}
+
+void displayMap_robot(t_map map, t_node** nodes, int node_count) {
+
+    //display the map with robot node_count times
+    for (int i = 0; i < node_count; i++) {
+        for (int j=0; j<map.y_max; j++) {
+            for (int k=0; k<map.x_max; k++) {
+                if (nodes[i]->localisation.pos.x == k && nodes[i]->localisation.pos.y == j) {
+                    switch (nodes[i]->localisation.ori) {
+                        case NORTH:
+                            printf(" ↑ ");
+                            break;
+                        case EAST:
+                            printf(" → ");
+                            break;
+                        case SOUTH:
+                            printf(" ↓ ");
+                            break;
+                        case WEST:
+                            printf(" ← ");
+                            break;
+                        default:
+                            printf("?");
+                            break;
+                    }
+                }
+
+                else {
+                    switch (map.soils[j][k]) {
+                        case BASE_STATION:
+                            printf("B");
+                        break;
+                        case PLAIN :
+                            printf("P");
+                        break;
+                        case ERG :
+                            printf("E");
+                        break;
+                        case REG :
+                            printf("R");
+                        break;
+                        case CREVASSE :
+                            printf("C");
+                        break;
+                        default:
+                            printf("?");
+                        break;
+                    }
+                }
+            }
+            printf("\n");
+        }
+        printf("\n\n\n");
+    }
+}
+
+void display_best_move(t_node** node_list, int node_count) {
+    for (int i = 0; i < node_count; i++) {
+        switch ((t_move)node_list[i]->chosen_move) {
+            case F_10:
+                printf("Forward 10m\n");
+                break;
+            case F_20:
+                printf("Forward 20m\n");
+                break;
+            case F_30:
+                printf("Forward 30m\n");
+                break;
+            case B_10:
+                printf("Back 10m\n");
+                break;
+            case T_LEFT:
+                printf("Turn left\n");
+                break;
+            case T_RIGHT:
+                printf("Turn right\n");
+                break;
+            case U_TURN:
+                printf("Turn back\n");
+                break;
+            default:
+                printf("No existing movement\n");
+                break;
+        }
+    }
 }
 
 /*

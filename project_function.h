@@ -185,6 +185,7 @@ t_node* deep_copy_node(t_node* src);
 
 t_map choose_map();
 
+void free_tree(t_node*);
 
 
 //t_queue list_position(t_node* node);

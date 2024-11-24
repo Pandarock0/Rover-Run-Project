@@ -12,6 +12,7 @@
 #include <string.h>
 
 
+
 #define TOTAL_MOVES 9
 
 
@@ -65,6 +66,116 @@ int* moveexecution() {
     }
 
     return moves;
+}
+
+t_map choose_map() {
+    printf("Choose a map to load:\n");
+    printf("1. example1.map\n");
+    printf("2. training.map\n");
+    printf("3. projectmap.map\n");
+    printf("4. Other map\n");
+    int mapchoice;
+    t_map map;
+    scanf("%d", &mapchoice);
+    switch (mapchoice) {
+        case 1:
+            map = createMapFromFile("..\\maps\\example1.map");
+            printf("Map created with dimensions %d x %d\n", map.y_max, map.x_max);
+            for (int i = 0; i < map.y_max; i++)
+            {
+                for (int j = 0; j < map.x_max; j++)
+                {
+                    printf("%d ", map.soils[i][j]);
+                }
+                printf("\n");
+            }
+            // printf the costs, aligned left 5 digits
+            for (int i = 0; i < map.y_max; i++)
+            {
+                for (int j = 0; j < map.x_max; j++)
+                {
+                    printf("%-5d ", map.costs[i][j]);
+                }
+                printf("\n");
+            }
+            displayMap(map);
+            break;
+        case 2:
+            map = createMapFromFile("..\\maps\\training.map");
+            printf("Map created with dimensions %d x %d\n", map.y_max, map.x_max);
+            for (int i = 0; i < map.y_max; i++)
+            {
+                for (int j = 0; j < map.x_max; j++)
+                {
+                    printf("%d ", map.soils[i][j]);
+                }
+                printf("\n");
+            }
+            // printf the costs, aligned left 5 digits
+            for (int i = 0; i < map.y_max; i++)
+            {
+                for (int j = 0; j < map.x_max; j++)
+                {
+                    printf("%-5d ", map.costs[i][j]);
+                }
+                printf("\n");
+            }
+            displayMap(map);
+            break;
+        case 3:
+            map = createMapFromFile("..\\maps\\projectmap.map");
+            printf("Map created with dimensions %d x %d\n", map.y_max, map.x_max);
+            for (int i = 0; i < map.y_max; i++)
+            {
+                for (int j = 0; j < map.x_max; j++)
+                {
+                    printf("%d ", map.soils[i][j]);
+                }
+                printf("\n");
+            }
+            // printf the costs, aligned left 5 digits
+            for (int i = 0; i < map.y_max; i++)
+            {
+                for (int j = 0; j < map.x_max; j++)
+                {
+                    printf("%-5d ", map.costs[i][j]);
+                }
+                printf("\n");
+            }
+            displayMap(map);
+            break;
+        case 4:
+            printf("Enter the exact name of the map you want to load:\n");
+            char name[100];
+            scanf("%s", name);
+            char path[100] = "..\\\\maps\\\\";
+            strcat(path, name);
+            char finalpath[100] = ".map";
+            strcat(path, finalpath);
+            printf("%s \n", path);
+            map = createMapFromFile(path);
+            printf("Map created with dimensions %d x %d\n", map.y_max, map.x_max);
+            for (int i = 0; i < map.y_max; i++)
+            {
+                for (int j = 0; j < map.x_max; j++)
+                {
+                    printf("%d ", map.soils[i][j]);
+                }
+                printf("\n");
+            }
+            // printf the costs, aligned left 5 digits
+            for (int i = 0; i < map.y_max; i++)
+            {
+                for (int j = 0; j < map.x_max; j++)
+                {
+                    printf("%-5d ", map.costs[i][j]);
+                }
+                printf("\n");
+            }
+            displayMap(map);
+            break;
+    }
+    return map;
 }
 
 

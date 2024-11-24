@@ -1,12 +1,75 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include "map.h"
 #include "project_function.h"
+
+void menu(){
+    printf("1. Choose the map of your choice for the rover\n");
+    printf("2. Execute a phase of 9 random moves\n");
+    printf("3. Display nodes of the tree (you need to stop the program)\n");
+    printf("4. Display the costs\n");
+    printf("5. Display nodes located at the base\n");
+    printf("6. Display MARC displacement (test)\n");
+    printf(". Complete ");
+
+
+
+
+    printf(". Exit\n");
+    int choice, cost;
+    t_map map = createTrainingMap();
+    t_tree tree;
+    int* moves;
+    srand(time(NULL));
+    int *list_mvmt = moveexecution();
+    Route route = minimum_route(tree);
+    scanf("%d", &choice);
+    switch (choice) {
+        case 1:
+            choose_map();
+            menu();
+            break;
+
+        case 2:
+            printf("\n[");
+            moves = moveexecution();
+            for (int i = 0; i < 9; i++) {
+                printf("%d", moves[i]);
+            }
+            printf("]\n");
+            menu();
+            break;
+
+        case 3:
+            tree = create_tree(moveexecution(), map);
+            display_tree(tree.root_node);
+            menu();
+            break;
+
+        case 4:
+            tree = create_tree(moveexecution(), map);
+            cost = calculate_cost(tree.root_node);
+            printf("The cost of the path is %d\n", &cost);
+            menu();
+            break;
+
+        case 5:
+            tree = create_tree(moveexecution(), map);
+            print_base_station_nodes(tree.root_node);
+            break;
+        case 6:
+            display_best_move(test_function(), 3);
+            menu();
+    }
+}
 
 
 
 int main() {
-    t_map map = createMapFromFile("..\\maps\\example1.map");
+    menu();
+
+    /*t_map map = createMapFromFile("..\\maps\\example1.map");
     printf("Map created with dimensions %d x %d\n", map.y_max, map.x_max);
     for (int i = 0; i < map.y_max; i++)
     {
@@ -34,7 +97,7 @@ int main() {
     //map = createTrainingMap();
 
     t_tree tree = create_tree(list_mvmt, map);
-
+    Route route = minimum_route(tree);
 
 
     while (1) {
@@ -60,12 +123,12 @@ int main() {
             displayMap_robot(map, test_function(), 3);
         }
         else if (val == 5) {
-            //display_best_move();
+            display_best_move(test_function(), 3);
         }
-        else if (val == 6 || val != 1 || val != 2 || val != 3 || val !=4 || val != 5){
-            break;
+        else if (val == 6){
+            minimum_route(tree);
         }
     }
-
+*/
     return 0;
 }

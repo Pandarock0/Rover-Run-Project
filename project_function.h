@@ -183,6 +183,8 @@ Route minimum_route(t_tree tree);
  */
 t_node* copy_node(t_node* src);
 
+t_map choose_map();
+
 
 
 //t_queue list_position(t_node* node);

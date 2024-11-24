@@ -1,18 +1,13 @@
-cmake_minimum_required(VERSION 3.30)
+cmake_minimum_required(VERSION 3.27.8)
 project(Rover_Run_Project C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Rover_Run_Project main.c
-        loc.c
-        loc.h
-        map.c
-        map.h
+add_executable(main
+        main.c
         project_function.c
-        project_function.h
-        moves.c
-        moves.h
+        map.c
+        loc.c
         stack.c
-        stack.h
         queue.c
-        queue.h)
+        moves.c)
